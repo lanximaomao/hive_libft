@@ -6,10 +6,10 @@ void ft_putchar(char c)
 }
 
 
-int main()
-{
-	ft_putchar('z');
-	ft_putchar('\n');
-	return (0);
-}
+//int main()
+//{
+//	ft_putchar('z');
+//	ft_putchar('\n');
+//	return (0);
+//}
 
