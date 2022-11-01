@@ -7,6 +7,7 @@
 #include <stddef.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <xlocale.h>
 
 int	ft_atoi(char *str);

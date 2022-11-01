@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:45:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 11:39:16 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/01 16:31:41 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,42 @@
 int main()
 {
 	//isalpha
+
+
 	//isdigit
+
+
 	//isalnum
+
+
 	//isascii
+
+
 	//isprint
+
+
 	//strlen
-	//memset
+
+
+	//memset!
+	//char str1[50] = "abcdefg";
+	//char str2[50] = "abcdefg";
+
+	//memset(str1, 90, 49);
+	//printf("memset_no1 %s\n", str1);
+
+	//ft_memset(str2, 90, 49);
+	//printf("memset_no2 %s\n", str2);
+
 	//bzero
-	//memcpy
+	//memcpy!
+	//const char s4[] = "12";
+	//char s5[100] = "abcd";
+	//char s6[100] = "abcd";
+	//printf("memcpy_no1 %s\n", memcpy(NULL, NULL, 0));
+	//printf("memcpy_no2 %s\n", ft_memcpy(NULL, NULL, 0));
+	//printf("memcpy_no1 %s\n", memcpy(s5, s4, 20));
+	//printf("memcpy_no2 %s\n", ft_memcpy(s6, s4, 20));
 
 //int	ft_memcmp(const void *s1, const void * s2, size_t n)
 //{
@@ -43,23 +71,19 @@ int main()
 //}
 
 
-//int main()
-//{
-//	char s1[] = "";
-//	char s2[] = "";
-//	char s3[] = "";
-//	char s4[] = "abcd";
-//	char s5[] = "abcd";
-//	char s6[] = "abcd";
-//	ft_memcpy(NULL, NULL, 0);
-//	puts(s1);
-//	memcpy(NULL, NULL, 0);
-//	puts(s3);
-//	return(0);
-//}
 
 
-//	//memmove
+//	//memmove!
+	//char str1[50];
+	//char str2[50];
+
+	//strcpy(str1, "aa");
+	//strcpy(str2, "bbcc");
+
+	//memmove(str1, str2, 3);
+	//puts(str1);
+	//ft_memmove(str1, str2, 3);
+	//puts(str1);
 //	//strlcpy
 //	//strlcat
 //	//toupper
@@ -72,7 +96,10 @@ int main()
 //	printf("%d\n", strncmp(s1, s2, 3));
 //	printf("%d\n", ft_strncmp(s1, s2, 3));
 
-//	//memchr
+//	//memchr!
+	char s1[20] = "helZlo world";
+	printf("memchr %s\n", memchr(s1, 90, 100));
+	printf("ft_memchr %s\n", memchr(s1, 90, 100));
 //	//memcmp
 
 //	printf("%d\n", memcmp(s1, s2, 20));
@@ -113,45 +140,7 @@ int main()
 //	return(dst);
 //}
 
-/*
-int main(void)
-{
-	char str1[50];
-	char str2[50];
 
-	strcpy(str1, "aa");
-	strcpy(str2, "bbcc");
-	puts(str1);
-
-	memmove(str1, str2, 3);
-	puts(str1);
-	ft_memmove(str1, str2, 3);
-	puts(str1);
-
-
-	return(0);
-}
-*/
-
-
-//int	main(void)
-//{
-//	char str1[50];
-
-//	strcpy(str1, "aaaaaaaaaa");
-//	puts(str1);
-
-//	memset(str1, 90, 3);
-//	puts(str1);
-
-//	ft_memset(str1, 90, 3);
-//	puts(str1);
-
-//	return(0);
-//}
-
-//int main()
-//{
 //	printf("%s\n", strchr("abced", 90));
 //	printf("%s\n", ft_strchr("abced", 90));
 //	// printf("%s\n", strchr("aabbcdews", 99));
@@ -220,3 +209,7 @@ int main(void)
 //	}
 //	return(0);
 //}
+
+
+	return(0);
+}

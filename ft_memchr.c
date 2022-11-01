@@ -6,11 +6,16 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 14:30:46 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 13:54:13 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/01 16:33:19 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**locates the first ccurrence of c, in a string.
+**a pointer to the byte located or null is returned.
+*/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -19,15 +24,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	first = (char *)s;
-	while (first[i] != c && i < n)
+	while (i < n)
 	{
+		if (first[i] == c)
+			return (&first[i]);
 		i++;
 	}
-	if (first[i] == c)
-	{
-		first = first + i;
-		return (first);
-	}
-	else
-		return (0);
+	return (0);
 }

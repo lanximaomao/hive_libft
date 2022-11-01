@@ -6,11 +6,16 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:24:27 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 13:51:42 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/01 16:53:18 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** compare two strings
+** both strings are assumed to be n bytes long
+*/
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -21,7 +26,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	s1_ = (unsigned char *)s1;
 	s2_ = (unsigned char *)s2;
-	while (s1_[i] == s2_[i] && i < n)
+	while (i < n)
+	{
+		if (s1_[i] != s2_[i])
+			return (s1_[i] - s2_[i]);
 		i++;
-	return (s1_[i] - s2_[i]);
+	}
+	return (0);
 }
