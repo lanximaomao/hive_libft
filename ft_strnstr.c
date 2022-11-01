@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:51:23 by lsun              #+#    #+#             */
-/*   Updated: 2022/10/31 17:29:56 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/01 09:30:23 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,3 @@ char * ft_strnstr(const char *haystack, const char *needle, size_t len)
 	else
 		return(0);
 }
-
-// int	main()
-// {
-// 	char s1[] = "hello";
-// 	char s2[] = "ll";
-// 	printf("%s\n", ft_strnstr(s1, s2, 5));
-// 	printf("%s\n", strnstr(s1, s2, 5));
-// 	return(0);
-// }

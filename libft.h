@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <xlocale.h>
 
-void ft_putchar(char c);
 int ft_strlen( char *str);
 void *ft_memmove(void *dst, const void *src, size_t len);
 

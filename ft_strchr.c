@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/01 09:32:49 by lsun              #+#    #+#             */
+/*   Updated: 2022/11/01 09:32:50 by lsun             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char * ft_strchr(const char*s, int c)
@@ -18,15 +30,4 @@ char * ft_strchr(const char*s, int c)
 	}
 	else
 		return(0);
-}
-
-int main()
-{
-	printf("%s\n", strchr("abced", 90));
-	printf("%s\n", ft_strchr("abced", 90));
-	// printf("%s\n", strchr("aabbcdews", 99));
-	// printf("%s\n", ft_strchr("aabbcdews", 99));
-	// printf("%s\n", strrchr("a*a", 42));
-	// printf("%s\n", ft_strrchr("a*a", 42));
-	return(0);
 }
