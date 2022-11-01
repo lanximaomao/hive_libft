@@ -6,11 +6,13 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 09:32:12 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 13:59:20 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/01 17:19:05 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* locates the last occurrence of c*/
 
 char	*ft_strrchr(const char *s, int c)
 {
