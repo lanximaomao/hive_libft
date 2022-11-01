@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_main.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:45:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 09:30:59 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/01 11:39:16 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,51 +43,51 @@ int main()
 //}
 
 
-int main()
-{
-	char s1[] = "";
-	char s2[] = "";
-	char s3[] = "";
-	char s4[] = "abcd";
-	char s5[] = "abcd";
-	char s6[] = "abcd";
-	ft_memcpy(NULL, NULL, 0);
-	puts(s1);
-	memcpy(NULL, NULL, 0);
-	puts(s3);
-	return(0);
-}
+//int main()
+//{
+//	char s1[] = "";
+//	char s2[] = "";
+//	char s3[] = "";
+//	char s4[] = "abcd";
+//	char s5[] = "abcd";
+//	char s6[] = "abcd";
+//	ft_memcpy(NULL, NULL, 0);
+//	puts(s1);
+//	memcpy(NULL, NULL, 0);
+//	puts(s3);
+//	return(0);
+//}
 
 
-	//memmove
-	//strlcpy
-	//strlcat
-	//toupper
-	//tolower
-	//strchr
-	//strrchr
-	//strncmp
-	const char s1[] = "ldfa;jdfaa";
-	const char s2[] = "ldfa;jdfaa";
-	printf("%d\n", strncmp(s1, s2, 3));
-	printf("%d\n", ft_strncmp(s1, s2, 3));
+//	//memmove
+//	//strlcpy
+//	//strlcat
+//	//toupper
+//	//tolower
+//	//strchr
+//	//strrchr
+//	//strncmp
+//	const char s1[] = "ldfa;jdfaa";
+//	const char s2[] = "ldfa;jdfaa";
+//	printf("%d\n", strncmp(s1, s2, 3));
+//	printf("%d\n", ft_strncmp(s1, s2, 3));
 
-	//memchr
-	//memcmp
+//	//memchr
+//	//memcmp
 
-	printf("%d\n", memcmp(s1, s2, 20));
-	printf("%d\n", ft_memcmp(s1, s2, 20));
-	//strnstr
-	//atoi
+//	printf("%d\n", memcmp(s1, s2, 20));
+//	printf("%d\n", ft_memcmp(s1, s2, 20));
+//	//strnstr
+//	//atoi
 
-	return(0);
-}
+//	return(0);
+//}
 
-int main()
-{
+//int main()
+//{
 
-	return(0);
-}
+//	return(0);
+//}
 
 
 //void *ft_memmove(void *dst, const void *src, size_t len)
@@ -134,32 +134,32 @@ int main(void)
 */
 
 
-int	main(void)
-{
-	char str1[50];
+//int	main(void)
+//{
+//	char str1[50];
 
-	strcpy(str1, "aaaaaaaaaa");
-	puts(str1);
+//	strcpy(str1, "aaaaaaaaaa");
+//	puts(str1);
 
-	memset(str1, 90, 3);
-	puts(str1);
+//	memset(str1, 90, 3);
+//	puts(str1);
 
-	ft_memset(str1, 90, 3);
-	puts(str1);
+//	ft_memset(str1, 90, 3);
+//	puts(str1);
 
-	return(0);
-}
+//	return(0);
+//}
 
-int main()
-{
-	printf("%s\n", strchr("abced", 90));
-	printf("%s\n", ft_strchr("abced", 90));
-	// printf("%s\n", strchr("aabbcdews", 99));
-	// printf("%s\n", ft_strchr("aabbcdews", 99));
-	// printf("%s\n", strrchr("a*a", 42));
-	// printf("%s\n", ft_strrchr("a*a", 42));
-	return(0);
-}
+//int main()
+//{
+//	printf("%s\n", strchr("abced", 90));
+//	printf("%s\n", ft_strchr("abced", 90));
+//	// printf("%s\n", strchr("aabbcdews", 99));
+//	// printf("%s\n", ft_strchr("aabbcdews", 99));
+//	// printf("%s\n", strrchr("a*a", 42));
+//	// printf("%s\n", ft_strrchr("a*a", 42));
+//	return(0);
+//}
 
 
 //int main()
@@ -198,9 +198,25 @@ int main()
 // }
 
 
-int main()
-{
-	printf("%d\n", ft_tolower(6));
-	printf("%d\n", tolower(6));
-	return(0);
-}
+//int main()
+//{
+//	printf("%d\n", ft_tolower(6));
+//	printf("%d\n", tolower(6));
+//	return(0);
+//}
+
+//int main()
+//{
+//	char* str;
+//	int i;
+//	//char *s1;
+//	i = 0;
+//	str = ft_calloc(10, 1);
+//	//s1 = (char*)str;
+//	while (i < 10)
+//	{
+//		printf("%d", str[i]);
+//		i++;
+//	}
+//	return(0);
+//}

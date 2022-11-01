@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/30 13:37:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 13:51:51 by lsun             ###   ########.fr       */
+/*   Created: 2022/11/01 11:51:38 by lsun              #+#    #+#             */
+/*   Updated: 2022/11/01 13:57:39 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t len)
+char	*ft_strdup(const char *src)
 {
-	size_t	i;
-	char	*dst_;
-	char	*src_;
+	int		i;
+	int		len;
+	char	*dest;
 
 	i = 0;
-	dst_ = (char *)dst;
-	src_ = (char *)src;
-	while (len > i)
+	len = ft_strlen((char *)src);
+	dest = (char *)malloc(sizeof(*src) * (len + 1));
+	if (*src == '\0')
+		return (0);
+	while (src[i] != '\0')
 	{
-		dst_[i] = src_[i];
+		dest[i] = src[i];
 		i++;
 	}
-	return (dst_);
+	dest[i] = '\0';
+	return (dest);
+}
+
+int	main(void)
+{
+	printf("%s", ft_strdup("hello"));
+	return (0);
 }

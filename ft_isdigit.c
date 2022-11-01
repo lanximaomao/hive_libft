@@ -6,13 +6,13 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:15:56 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 09:33:31 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/01 13:53:38 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

@@ -6,7 +6,7 @@
 #    By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/22 14:53:21 by lsun              #+#    #+#              #
-#    Updated: 2022/08/23 15:20:10 by lsun             ###   ########.fr        #
+#    Updated: 2022/11/01 10:56:27 by lsun             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 SRCS = ft_*.c
 OUTPUT = ft_*.o
 INCLUDE = libft.h
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -c -Wall -Wextra -Werror
 
 all: $(NAME) $(SRCS)
 $(NAME): $(SRCS)
