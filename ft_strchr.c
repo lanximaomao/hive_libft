@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 09:32:49 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 13:56:45 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/02 20:40:56 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	*first;
+	int	i;
 
 	i = 0;
-	first = (char *)s;
-	while (s[i] != c && s[i] != '\0')
+	while (*s)
 	{
-		i++;
+		if (*s == c)
+			return ((char *)s);
+		s++;
 	}
-	if (s[i] == c)
-	{
-		first = first + i;
-		return (first);
-	}
-	else
-		return (0);
+	if (*s == c)
+		return ((char *)s);
+	return (0);
 }

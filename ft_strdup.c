@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:51:38 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 13:57:39 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/02 21:47:31 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ char	*ft_strdup(const char *src)
 
 	i = 0;
 	len = ft_strlen((char *)src);
+	if (!*src && !src)
+		return (0);
 	dest = (char *)malloc(sizeof(*src) * (len + 1));
-	if (*src == '\0')
+	if (!dest)
 		return (0);
 	while (src[i] != '\0')
 	{
@@ -30,10 +32,4 @@ char	*ft_strdup(const char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int	main(void)
-{
-	printf("%s", ft_strdup("hello"));
-	return (0);
 }

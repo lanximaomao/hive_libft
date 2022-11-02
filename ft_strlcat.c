@@ -6,11 +6,16 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 09:32:45 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 13:57:54 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/02 22:12:28 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** if I don't have line 27-28 (if dstsize == 0, return 0)
+** unit test says: your strlcat crush when null parameter is sent with a size of 0. but why?
+*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -18,6 +23,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	j;
 	size_t	k;
 
+	if (!dst && !src)
+		return (0);
+	if (dstsize == 0)
+		return (0);
 	i = ft_strlen(dst);
 	j = 0;
 	k = ft_strlen(dst);
@@ -27,5 +36,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	{
 		dst[i++] = src[j++];
 	}
+	dst[i] = '\0';
 	return (k + ft_strlen((char *)(src)));
 }

@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:45:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 16:31:41 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/02 21:31:48 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,21 +85,40 @@ int main()
 	//ft_memmove(str1, str2, 3);
 	//puts(str1);
 //	//strlcpy
-//	//strlcat
+//	//strlcat!
+
+	//char dst1[100] = "aaaaa";
+	//char dst2[100] = "aaaaa";
+    //char src[] = "he!";
+    //printf("%lu\n",strlcat(dst1, src, 100));
+    //puts(dst1);
+	//printf("%lu\n",ft_strlcat(dst2, src, 100));
+    //puts(dst2);
+	//return(0);
+
 //	//toupper
 //	//tolower
-//	//strchr
-//	//strrchr
+//	//strchr!
+	//printf("%s\n", strchr("a*a", 42));
+	//printf("%s\n", ft_strchr("a*a", 42));
+
+
+//	//strrchr!
+
+	//printf("%s\n", strrchr("a*a*aaa", 42));
+	//printf("%s\n", ft_strrchr("a*a*aaa", 42));
+
+
 //	//strncmp
-//	const char s1[] = "ldfa;jdfaa";
-//	const char s2[] = "ldfa;jdfaa";
-//	printf("%d\n", strncmp(s1, s2, 3));
-//	printf("%d\n", ft_strncmp(s1, s2, 3));
+	//const char s1[] = "ldfadfafdfaa";
+	//const char s2[] = "ldfa;zvzdfaa";
+	//printf("%d\n", strncmp(s1, s2, 8));
+	//printf("%d\n", ft_strncmp(s1, s2, 8));
 
 //	//memchr!
-	char s1[20] = "helZlo world";
-	printf("memchr %s\n", memchr(s1, 90, 100));
-	printf("ft_memchr %s\n", memchr(s1, 90, 100));
+	//char s1[20] = "helZlo world";
+	//printf("memchr %s\n", memchr(s1, 90, 100));
+	//printf("ft_memchr %s\n", memchr(s1, 90, 100));
 //	//memcmp
 
 //	printf("%d\n", memcmp(s1, s2, 20));
@@ -140,27 +159,9 @@ int main()
 //	return(dst);
 //}
 
-
-//	printf("%s\n", strchr("abced", 90));
-//	printf("%s\n", ft_strchr("abced", 90));
-//	// printf("%s\n", strchr("aabbcdews", 99));
-//	// printf("%s\n", ft_strchr("aabbcdews", 99));
-//	// printf("%s\n", strrchr("a*a", 42));
-//	// printf("%s\n", ft_strrchr("a*a", 42));
-//	return(0);
-//}
-
-
 //int main()
 //{
-//	char dst1[100] = "aaaaaaaaaaa";
-//	char dst2[100] = "aaaaaaaaaaa";
-//    char src[] = "he!";
-//    printf("%lu\n",strlcat(dst1, src, 1));
-//    puts(dst1);
-//	printf("%lu\n",ft_strlcat(dst2, src, 1));
-//    puts(dst2);
-//	return(0);
+
 //}
 
 //int main()
@@ -209,6 +210,12 @@ int main()
 //	}
 //	return(0);
 //}
+
+
+
+	printf("%s", ft_strdup("hello"));
+
+
 
 
 	return(0);

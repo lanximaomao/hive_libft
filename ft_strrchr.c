@@ -6,28 +6,32 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 09:32:12 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 17:19:05 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/02 21:27:12 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* locates the last occurrence of c*/
+/*
+** locates the last occurrence of c
+*/
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	char	*last;
+	int	len;
 
-	last = (char *)s;
-	if (ft_strlen((char *)s) == 0)
-		return (0);
-	i = ft_strlen(last) - 1;
-	while (s[i] != c && i >= 0 && s[i] != '\0')
+	len = ft_strlen(s);
+	if (!s && c != 0)
+		return (NULL);
+	if (c == 0)
+		return ((char *)s + ft_strlen(s));
+	s = s + ft_strlen(s) - 1;
+	while (*s && s && len > 0)
 	{
-		i--;
+		if (*s == (char)c)
+			return ((char *)s);
+		len--;
+		s--;
 	}
-	if (s[i] == c)
-		last = last + i;
-	return (last);
+	return (NULL);
 }

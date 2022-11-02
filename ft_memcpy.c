@@ -6,15 +6,15 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 13:37:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 15:09:08 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/02 21:56:53 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**fill a byte string with a byte given by c
-**overflow if len exceed the buffer size
+** fill a byte string with a byte given by c
+** overflow if len exceed the buffer size
 */
 
 void	*ft_memcpy(void *dst, const void *src, size_t len)
