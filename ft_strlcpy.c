@@ -6,36 +6,37 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 09:39:49 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 13:58:01 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/03 15:20:09 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(void *dst, const void *src, size_t len)
+/*
+** how to create a seg fault?
+** strlcpy(((void *)0), ((void *)0), 10);
+*/
+
+size_t	ft_strlcpy(void *dst, const void *src, size_t dstsize)
 {
-	size_t	i;
 	char	*dst_;
 	char	*src_;
 
-	i = 0;
 	dst_ = (char *)dst;
 	src_ = (char *)src;
-	if (src > dst)
-		while (len > i)
-		{
-			dst_[i] = src_[i];
-			i++;
-		}
-	else
+	if (!src || !dst)
+		return (0);
+	if (!dstsize)
+		return (ft_strlen((const char *)src_));
+	if (*src_ == '\0')
+		*dst_ = '\0';
+	while (dstsize > 1 && *src_ != '\0')
 	{
-		i = 0;
-		while (len > i)
-		{
-			dst_[len - 1 - i] = src_[len - 1 - i];
-			i++;
-		}
+		*dst_ = *src_;
+		dst_++;
+		src_++;
+		dstsize--;
 	}
-	dst_[len - 1] = '\0';
-	return (ft_strlen(dst_));
+	*dst_ = '\0';
+	return (ft_strlen((const char *)src));
 }

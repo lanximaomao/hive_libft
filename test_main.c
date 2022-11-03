@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:45:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/02 21:31:48 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/03 15:17:21 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,20 +84,35 @@ int main()
 	//puts(str1);
 	//ft_memmove(str1, str2, 3);
 	//puts(str1);
+
 //	//strlcpy
+
+	//char dst[] = "aaaaa";
+	//char src[] = "xxxxx";
+	//char dst2[] = "aaaaa";
+
+	//printf("%lu\n", ft_strlcpy(dst2, src, 4));
+	//puts(dst2);
+	//printf("%lu\n", strlcpy(dst, src, 4));
+	//puts(dst);
+	//return(0);
+	strlcpy(((void *)0), ((void *)0), 10);
+
 //	//strlcat!
 
 	//char dst1[100] = "aaaaa";
 	//char dst2[100] = "aaaaa";
     //char src[] = "he!";
-    //printf("%lu\n",strlcat(dst1, src, 100));
+    //printf("%lu\n",strlcat(dst1, src, 80));
     //puts(dst1);
-	//printf("%lu\n",ft_strlcat(dst2, src, 100));
+	//printf("%lu\n",ft_strlcat(dst2, src, 80));
     //puts(dst2);
 	//return(0);
 
 //	//toupper
 //	//tolower
+//	printf("%d\n", ft_tolower(6));
+//	printf("%d\n", tolower(6));
 //	//strchr!
 	//printf("%s\n", strchr("a*a", 42));
 	//printf("%s\n", ft_strchr("a*a", 42));
@@ -126,56 +141,13 @@ int main()
 //	//strnstr
 //	//atoi
 
-//	return(0);
-//}
-
-//int main()
-//{
-
-//	return(0);
-//}
 
 
-//void *ft_memmove(void *dst, const void *src, size_t len)
-//{
-//	int i;
-//	char *new_dst;
-//	char *new_src;
 
-//	i = 0;
-//	new_dst = (char*)dst;
-//	new_src = (char*)src;
 
-//	new_dst = new_dst + len;
-//	new_src = new_src + len;
 
-//	while (i < len)
-//	{
-//		new_dst = new_src;
-//		new_dst--;
-//		new_src--;
-//		i++;
-//	}
-//	return(dst);
-//}
 
-//int main()
-//{
 
-//}
-
-//int main()
-//{
-//	char dst[] = "aaaaa";
-//	char src[] = "xxxxx";
-//	char dst2[] = "aaaaa";
-
-//	ft_strlcpy(dst, src, 2);
-//	puts(dst);
-//	strlcpy(dst2, src, 2);
-//	puts(dst2);
-//	return(0);
-//}
 
 
 // int	main()
@@ -190,8 +162,7 @@ int main()
 
 //int main()
 //{
-//	printf("%d\n", ft_tolower(6));
-//	printf("%d\n", tolower(6));
+
 //	return(0);
 //}
 
@@ -213,7 +184,7 @@ int main()
 
 
 
-	printf("%s", ft_strdup("hello"));
+	//printf("%s", ft_strdup("hello"));
 
 
 
