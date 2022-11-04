@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:45:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/03 15:17:21 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/04 15:21:35 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,14 +160,35 @@ int main()
 // }
 
 
-//int main()
-//{
 
-//	return(0);
+
+//ft_strjoin!
+//	char *s1 = "abc";
+//	char *s2 = "12";
+//	char *i1 = ft_strjoin(s1, s2);
+//	char *i2 = ft_strjoin(s1, s2);
+//	char *i3 = ft_strjoin(NULL, s2);
+//	char *i4 = ft_strjoin(s1, NULL);
+//	char *i5 = ft_strjoin(NULL, NULL);
+//	printf("%s\n", i1);
+//	printf("%s\n", i2);
+//	printf("%s\n", i3);
+//	printf("%s\n", i4);
+//	printf("%s\n", i5);
+
+//ft_strmapi!
+//char f(unsigned int a, char c)
+//{
+//	if(a >= 0)
+//		return(c);
+//	else
+//		return ((int)c + 1);
 //}
+//	const char *s1 = "hello";
+//	char *result;
+//	result = ft_strmapi (s1, f);
+//	printf("%s\n", result);
 
-//int main()
-//{
 //	char* str;
 //	int i;
 //	//char *s1;
