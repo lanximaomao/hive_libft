@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 15:22:47 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/07 10:49:33 by lsun             ###   ########.fr       */
+/*   Created: 2022/11/07 10:30:36 by lsun              #+#    #+#             */
+/*   Updated: 2022/11/07 13:05:32 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-	int	len;
-
-	if(!s || !*s)
-		return;
-	i = 0;
-	len = ft_strlen((const char*)s);
-	while (i < len)
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
+
+//int main()
+//{
+//	int fd;
+//	fd = open("memo.txt", O_WRONLY);
+//	ft_putendl_fd("hello", fd);
+//	return(0);
+//}

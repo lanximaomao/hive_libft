@@ -1,9 +1,0 @@
-header?
-test?
-my github?
-vim tutor
-
-
-
-norminette
-1) don't put a space before a function but a tab

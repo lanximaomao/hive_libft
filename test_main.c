@@ -6,11 +6,17 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:45:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/04 15:21:35 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/07 12:48:39 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void f(unsigned int a, char* str)
+{
+	printf("%d\n", a);
+	printf("%s\n", str);
+}
 
 int main()
 {
@@ -189,6 +195,10 @@ int main()
 //	result = ft_strmapi (s1, f);
 //	printf("%s\n", result);
 
+//ft_stritri!
+	//ft_striteri("Hello", f);
+
+
 //	char* str;
 //	int i;
 //	//char *s1;
@@ -208,7 +218,16 @@ int main()
 	//printf("%s", ft_strdup("hello"));
 
 
+//ft_putchar_fd!
+	//int fd;
+	//fd = open("memo.txt", O_WRONLY);
+	//ft_putchar_fd('Q', fd);
+	//close(fd);
 
+//ft_putstr_fd
+	//int fd;
+	//fd = open("memo.txt", O_WRONLY);
+	//ft_putstr_fd("hello", fd);
 
 	return(0);
 }
