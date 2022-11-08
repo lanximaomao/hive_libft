@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:45:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/07 12:48:39 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/08 17:32:03 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,3 +231,28 @@ int main()
 
 	return(0);
 }
+
+
+
+	//printf("%lu\n", ft_word_count("", 32));
+	//printf("%lu\n", ft_word_count("   what      how      why", 32));
+	//printf("%lu\n", ft_word_count("what      how      why   ", 32));
+	//printf("%lu\n", ft_word_count("   what      how      why      ", 32));
+
+	//print char **
+	//char ** str_arr;
+	//str_arr = (char **)malloc(sizeof(char*) * 4);
+	//str_arr[0] = (char*)malloc(sizeof(char) + 6);
+	//str_arr[1] = (char*)malloc(sizeof(char) + 6);
+
+	//int i;
+	//i = 0;
+
+	//strcpy(str_arr[0], "Hello");
+	//strcpy(str_arr[1], "world");
+
+	//while (i < 2)
+	//{
+	//	printf("%s\n", str_arr[i]);
+	//	i++;
+	//}
