@@ -147,6 +147,23 @@ int main()
 //	//strnstr
 //	//atoi
 
+// split!
+// int main()
+// {
+// 	int i;
+// 	i = 0;
+// 	char **str_arr;
+// 	char s[] = "  hello world  ";
+// 	str_arr = ft_split(NULL, ' ');
+// 	printf("%s", *str_arr);
+	// while (i < 3)
+	// {
+	// 	printf("%s\n", str_arr[i]);
+	// 	i++;
+	// }
+	// return(0);
+// }
+
 
 
 

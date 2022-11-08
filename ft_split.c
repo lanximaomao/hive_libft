@@ -37,11 +37,6 @@ size_t ft_word_len(const char *s, char c, size_t *i)
 
 	s1 = (char*)s + (*i);
 	word_len = 0;
-
-	// printf("\n %s, %c, %lu \n", s1, c, *i);
-	// printf("test");
-	// printf("%c\n", *s1);
-
 	while (*s1 == c)
 	{
 		s1++;
@@ -52,7 +47,6 @@ size_t ft_word_len(const char *s, char c, size_t *i)
 		word_len++;
 		s1++;
 	}
-	// printf("test %lu\n", word_len);
 	return(word_len);
 }
 
@@ -63,22 +57,15 @@ size_t ft_assign(const char *s, char** str_arr, int count, char c, size_t i_come
 
 	i_go = 0;
 	word_len = ft_word_len(s, c, &i_come);
-
-	// printf("\n%lu\n", word_len);
-
 	str_arr[count] = (char *)malloc(sizeof(char)*(word_len + 1));
 	if(!str_arr[count])
 		return (0);
 	while (i_go < word_len)
 	{
 		str_arr[count][i_go] = s[i_come + i_go];
-		// printf("%c\n", str_arr[count][i_go]);
 		i_go++;
-
 	}
 	str_arr[count][i_go] = '\0';
-
-	// printf("%s\n", str_arr[count]);
 	return (i_go + i_come);
 }
 
@@ -95,39 +82,17 @@ char **ft_split(char const *s, char c)
 		str_arr[0] = NULL;
 		return(str_arr);
 	}
-	// printf("%c", c);
-	// printf("%s", s);
 	count = ft_word_count(s, c);
 	count_start = 0;
-	// printf("\n%lu\n", count);
 	str_arr = (char**)malloc(sizeof(char*)*(count + 1));
 	if (!str_arr)
 		return(0);
-	// // str_arr[count] = '\0';
 	i = 0;
 	while (count_start < count)
 	{
 		i = ft_assign(s, str_arr,count_start, c, i);
 		count_start++;
-		// printf("%lu", count_start);
 	}
 	str_arr[count] = NULL; 
-	
 	return(str_arr);
 }
-
-// int main()
-// {
-// 	int i;
-// 	i = 0;
-// 	char **str_arr;
-// 	char s[] = "  hello world  ";
-// 	str_arr = ft_split(NULL, ' ');
-// 	printf("%s", *str_arr);
-	// while (i < 3)
-	// {
-	// 	printf("%s\n", str_arr[i]);
-	// 	i++;
-	// }
-	// return(0);
-// }
