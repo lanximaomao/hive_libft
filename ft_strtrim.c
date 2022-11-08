@@ -12,5 +12,10 @@
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-	
+	if (!s1 || ! set)
+	{
+
+	}
+	char *s2 = "hello";
+	return(s2);
 }

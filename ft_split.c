@@ -90,7 +90,11 @@ char **ft_split(char const *s, char c)
 	size_t	i;
 
 	if (!s || !*s)
-		return(0);
+	{
+		str_arr = (char **)malloc(sizeof(char*)*1);
+		str_arr[0] = NULL;
+		return(str_arr);
+	}
 	// printf("%c", c);
 	// printf("%s", s);
 	count = ft_word_count(s, c);
@@ -107,22 +111,23 @@ char **ft_split(char const *s, char c)
 		count_start++;
 		// printf("%lu", count_start);
 	}
-	// printf("%s\n", str_arr[0]);
+	str_arr[count] = NULL; 
+	
 	return(str_arr);
 }
 
-int main()
-{
-	int i;
-	i = 0;
-	char **str_arr;
-	char s[] = "  he  llo wordld  ";
-	str_arr = ft_split(s, ' ');
-	// printf("%s", *str_arr);
-	while (i < 3)
-	{
-		printf("%s\n", str_arr[i]);
-		i++;
-	}
-	return(0);
-}
+// int main()
+// {
+// 	int i;
+// 	i = 0;
+// 	char **str_arr;
+// 	char s[] = "  hello world  ";
+// 	str_arr = ft_split(NULL, ' ');
+// 	printf("%s", *str_arr);
+	// while (i < 3)
+	// {
+	// 	printf("%s\n", str_arr[i]);
+	// 	i++;
+	// }
+	// return(0);
+// }

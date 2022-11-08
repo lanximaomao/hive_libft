@@ -1,5 +1,5 @@
 #ifndef __LIBFT__H__
-# define __LIBFT__H__
+#define __LIBFT__H__
 #define NULL __null
 
 #include <string.h>
@@ -11,8 +11,8 @@
 #include <xlocale.h>
 #include <fcntl.h>
 
-int	ft_atoi(char *str);
-void	*ft_bzero(void *s, size_t n);
+int	ft_atoi(const char *str);
+void *ft_bzero(void *s, size_t n);
 void * ft_calloc(size_t count, size_t size);
 int	ft_isalnum(int c);
 int ft_isalpha(int c);
