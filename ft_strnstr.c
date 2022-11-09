@@ -17,38 +17,38 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	size_t	needle_len;
 
 	i = 0;
-	j = 0;
+	// printf("%lu", len);
+	if(!haystack || !*haystack || !needle)
+		return(NULL);
 	if (needle == '\0')
 		return ((char *)haystack);
-	if (ft_strlen(needle) > ft_strlen(haystack)
-		|| ft_strlen(needle) > len || len == 0)
-		return (NULL);
-	while (i < ft_strlen(haystack) && i < len
-		&& j < ft_strlen(needle))
+	needle_len = ft_strlen(needle);
+	while ( i < len && haystack[i] && len >= needle_len)
 	{
-		if (haystack[i] == needle[j])
-			j++;
-		else
-			j = 0;
+		if (ft_strncmp(haystack + i, needle, needle_len) == 0)
+			if (i + needle_len <= len)
+				return((char*)haystack + i);
 		i++;
 	}
-	if (j == ft_strlen(needle))
-		return ((char *)haystack + i - j - 1);
-	else
-		return (0);
+	return(NULL);
 }
 
 int main()
 {
 	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-//	printf("%s\n",ft_strnstr(haystack, needle, -1));
-//	printf("%s\n",ft_strnstr(haystack, "a", -1));
-//	printf("%s\n",ft_strnstr(haystack, "aaabc", 5));
-	printf("%s\n",ft_strnstr(haystack, "abcd", 9));
+// 	char needle[10] = "aabc";
+// 	printf("%s\n",ft_strnstr(haystack, needle, -1));
+	// printf("%s\n",ft_strnstr(haystack, "cd", 8)); 
+	printf("%s\n",ft_strnstr(haystack, "", -1));
+	printf("%s\n",ft_strnstr(haystack, "", 0));
+// 	printf("%s\n",ft_strnstr(haystack, "aaabc", 5));
+// 	printf("%s\n",ft_strnstr(haystack, "abcd", 9));
+
+// /* 5 */ check(ft_strnstr(empty, "", -1) == empty); showLeaks();
+// /* 6 */ check(ft_strnstr(empty, "", 0) == empty); showLeaks();
 
 	return(0);
 }
