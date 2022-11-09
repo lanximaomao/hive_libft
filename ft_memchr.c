@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 14:30:46 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/01 16:33:19 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/09 15:59:11 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 	char	*first;
+	unsigned char	checker;
 
 	i = 0;
 	first = (char *)s;
+	checker = (unsigned char)c;
 	while (i < n)
 	{
-		if (first[i] == c)
+		if (first[i] == checker)
 			return (&first[i]);
 		i++;
 	}
