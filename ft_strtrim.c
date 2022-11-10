@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:14:55 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 16:12:51 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/10 17:13:33 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,42 +15,31 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
+	int		check;
 	int		start;
 	int		end;
 	char	*strim;
 
 	i = 0;
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	check = -1;
 	while (s1[i])
 	{
-		if (ft_strchr(set, s1[i]))
-			i++;
-		else
-			break ;
+		if (ft_strchr(set, s1[i]) && check < 0)
+			start++;
+		if (!(ft_strchr(set, s1[i])) && check < 0)
+			check = 1;
+		if (ft_strchr(set, s1[end]) && check > 0)
+			end--;
+		i++;
 	}
-	start = i;
-	i = ft_strlen(s1) - 1;
-	while (i > 0)
-	{
-		if (ft_strchr(set, s1[i]))
-			i--;
-		else
-			break ;
-	}
-	end = i;
-	i = 0;
-	strim = (char *)malloc(sizeof(char) * (end - start + 1 + 1));
+	strim = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (!strim)
 		return (NULL);
+	i = 0;
 	while (start <= end)
 		strim[i++] = s1[start++];
 	strim[i] = '\0';
 	return (strim);
 }
-
-//int	main(void)
-//{
-//	char	*strim;
-//	strim = ft_strtrim("hello word youoll", "hello word youoll");
-//	printf("%s\n", strim);
-//	return (0);
-//}
