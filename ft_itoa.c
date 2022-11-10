@@ -6,13 +6,13 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:58:47 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/08 11:12:10 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/10 16:07:40 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_digit_num(int n)
+int	ft_digit_num(long int n)
 {
 	int	digit;
 
@@ -32,28 +32,28 @@ int	ft_digit_num(int n)
 
 char	*ft_itoa(int n)
 {
-	int		digit;
-	int		i;
-	char	*str;
+	int			digit;
+	long int	ln;
+	char		*str;
 
-	i = 0;
-	digit = ft_digit_num(n);
+	ln = (long int)n;
+	digit = ft_digit_num(ln);
 	str = (char *)malloc(sizeof(char) * (digit + 1));
 	if (!str)
-		return (0);
-	if (n < 0)
+		return (NULL);
+	str[digit] = '\0';
+	if (ln < 0)
 	{
-		str[i] = '-';
-		i++;
-		n = n * (-1);
+		str[0] = '-';
+		ln = ln * (-1);
 	}
-	while (n >= 10 && digit > 0)
+	while (ln >= 10 && digit > 0)
 	{
-		str[digit - 1] = n % 10 + 48;
-		n = n / 10;
+		str[digit - 1] = ln % 10 + 48;
+		ln = ln / 10;
 		digit--;
 	}
-	if (n < 10 && i < digit)
-		str[digit - 1] = n % 10 + 48;
+	if (ln < 10)
+		str[digit - 1] = ln % 10 + 48;
 	return (str);
 }
