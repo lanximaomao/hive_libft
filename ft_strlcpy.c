@@ -24,8 +24,8 @@ size_t	ft_strlcpy(void *dst, const void *src, size_t dstsize)
 
 	dst_ = (char *)dst;
 	src_ = (char *)src;
-	if (!src || !dst)
-		return (0);
+	// if (!src || !dst)
+	// 	return (0);
 	if (!dstsize)
 		return (ft_strlen((const char *)src_));
 	if (*src_ == '\0')

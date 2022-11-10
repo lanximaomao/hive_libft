@@ -40,3 +40,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[sub_len] = '\0';
 	return (substr);
 }
+
+// int main()
+// {
+// 	printf("%s", ft_substr("bcdefga", 0, 6));
+// 	return(0);
+// }

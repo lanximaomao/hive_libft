@@ -20,11 +20,11 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
-	char			*first;
+	unsigned char			*first;
 	unsigned char	checker;
 
 	i = 0;
-	first = (char *)s;
+	first = (unsigned char *)s;
 	checker = (unsigned char)c;
 	while (i < n)
 	{
