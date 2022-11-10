@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:45:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/08 17:32:03 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/10 16:14:39 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -273,3 +273,10 @@ int main()
 	//	printf("%s\n", str_arr[i]);
 	//	i++;
 	//}
+//int main()
+//{
+//	int fd;
+//	fd = open("memo.txt", O_WRONLY);
+//	ft_putendl_fd("hello", fd);
+//	return(0);
+//}

@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 13:37:33 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/02 21:56:53 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/10 16:14:03 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	char	*dst_;
 	char	*src_;
 
-	if(dst == NULL && src == NULL)
-		return(NULL);
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	i = 0;
 	dst_ = (char *)dst;
 	src_ = (char *)src;

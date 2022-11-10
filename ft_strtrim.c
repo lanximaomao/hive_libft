@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:14:55 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 15:38:57 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/10 16:12:51 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (strim);
 }
 
-int	main(void)
-{
-	char	*strim;
-	strim = ft_strtrim("hello word youoll", "hello word youoll");
-	printf("%s\n", strim);
-	return (0);
-}
+//int	main(void)
+//{
+//	char	*strim;
+//	strim = ft_strtrim("hello word youoll", "hello word youoll");
+//	printf("%s\n", strim);
+//	return (0);
+//}
