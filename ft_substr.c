@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:12:38 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 14:18:33 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/11 12:32:10 by linlinsun        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[sub_len] = '\0';
 	return (substr);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_substr("bcdefga", 0, 6));
-// 	return(0);
-// }

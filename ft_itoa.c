@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_digit_num(long int n)
+static int	ft_digit_num(long int n)
 {
 	int	digit;
 

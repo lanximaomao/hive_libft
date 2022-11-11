@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:14:55 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 17:22:30 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/11 12:34:45 by linlinsun        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_trim_assign(char const *s1, int start, int end)
+static char	*ft_trim_assign(char const *s1, int start, int end)
 {
 	char	*strim;
 	int		i;

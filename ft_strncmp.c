@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 09:32:27 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/02 22:03:08 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/11 12:31:53 by linlinsun        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** why unsigned char?
-*/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

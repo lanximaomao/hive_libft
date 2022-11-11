@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:12:40 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 19:07:53 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/11 12:30:55 by linlinsun        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_word_count(const char *s, char c)
+static size_t	ft_word_count(const char *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -37,18 +37,14 @@ char	**ft_split(char const *s, char c)
 	size_t	len;
 
 	if (!s || !*s)
-	{
-		str_arr = (char **)malloc(sizeof(char *) * 1);
-		str_arr[0] = NULL;
-		return (str_arr);
-	}
+		return (NULL);
 	str_arr = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (!str_arr)
 		return (0);
 	i = 0;
 	while (*s)
 	{
-		if(*s != c)
+		if (*s != c)
 		{
 			len = 0;
 			while (*s != c && *s && ++len)
@@ -61,17 +57,3 @@ char	**ft_split(char const *s, char c)
 	str_arr[i] = 0;
 	return (str_arr);
 }
-
-// int main()
-// {
-// 	int i;
-// 	i = 0;
-// 	char **str_arr;
-// 	str_arr = ft_split("aeebcdefga", 'b');
-// 	while (i < 3)
-// 	{
-// 		printf("%s\n", str_arr[i]);
-// 		i++;
-// 	}
-// 	return(0);
-// }

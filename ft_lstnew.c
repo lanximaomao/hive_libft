@@ -1,21 +1,24 @@
-#include "libft.h"
-// #include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/11 12:16:07 by linlinsun         #+#    #+#             */
+/*   Updated: 2022/11/11 12:28:55 by linlinsun        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-t_list *ft_lstnew(void *content)
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content)
 {
 	t_list *new_node;
 
 	new_node = NULL;
-	new_node = malloc (sizeof(t_list));
-	new_node.content = content;
-	new_node.next = NULL;
-	return(new_node);
+	new_node = malloc(sizeof(t_list));
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
-
-// int main()
-// {
-// 	t_list *n1;
-// 	n1 = ft_lstnew("one");
-// 	printf("%s\n", n1.content);
-// 	return(0);
-// }

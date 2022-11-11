@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 14:30:46 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 16:13:43 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/11 12:29:00 by linlinsun        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**locates the first ccurrence of c, in a string.
-**a pointer to the byte located or null is returned.
+** locates the first ccurrence of c, in a string.
+** a pointer to the byte located or null is returned.
 */
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
-	unsigned char			*first;
+	unsigned char	*first;
 	unsigned char	checker;
 
 	i = 0;
