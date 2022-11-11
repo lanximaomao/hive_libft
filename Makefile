@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+         #
+#    By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/22 14:53:21 by lsun              #+#    #+#              #
-#    Updated: 2022/11/07 15:50:16 by lsun             ###   ########.fr        #
+#    Created: 2022/11/11 15:48:08 by linlinsun         #+#    #+#              #
+#    Updated: 2022/11/11 15:48:12 by linlinsun        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,4 +25,3 @@ clean:
 fclean:clean
 	/bin/rm -f $(NAME)
 re: fclean all
-bonus:
