@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 09:37:32 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 11:23:01 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/14 12:58:20 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int	result;
+	long	result;
 	int	sign;
 
 	sign = 1;

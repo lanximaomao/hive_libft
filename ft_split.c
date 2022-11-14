@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:12:40 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/11 12:30:55 by linlinsun        ###   ########.fr       */
+/*   Updated: 2022/11/14 12:59:00 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	len;
 
-	if (!s || !*s)
+	if (!s)
 		return (NULL);
 	str_arr = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (!str_arr)
