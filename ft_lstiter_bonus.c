@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:15:59 by linlinsun         #+#    #+#             */
-/*   Updated: 2022/11/14 21:00:56 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/14 21:18:18 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*temp;
 
-	if (!lst)
+	if (!lst || !f)
 		return ;
 	temp = lst;
-	while (temp->next)
+	while (temp)
 	{
-		f(temp);
+		f(temp->content);
 		temp = temp->next;
 	}
 }
