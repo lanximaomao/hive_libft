@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:15:59 by linlinsun         #+#    #+#             */
-/*   Updated: 2022/11/11 14:20:07 by linlinsun        ###   ########.fr       */
+/*   Updated: 2022/11/14 13:38:50 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	while (temp->next)
 	{
 		f(temp);
-		temp = temp.next;
+		temp = temp->next;
 	}
 }

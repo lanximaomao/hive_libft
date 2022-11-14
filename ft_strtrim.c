@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:14:55 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/11 12:34:45 by linlinsun        ###   ########.fr       */
+/*   Updated: 2022/11/14 20:31:19 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,13 @@ static char	*ft_trim_assign(char const *s1, int start, int end)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		check;
-	int		start;
-	int		end;
+	int	i;
+	int	check;
+	int	start;
+	int	end;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	start = 0;
 	end = ft_strlen(s1) - 1;

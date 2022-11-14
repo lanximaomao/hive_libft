@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:15:50 by linlinsun         #+#    #+#             */
-/*   Updated: 2022/11/11 12:25:24 by linlinsun        ###   ########.fr       */
+/*   Updated: 2022/11/14 20:35:11 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!*lst)
+		new = *lst;
 	new->next = *lst;
+	new = *lst;
 }
