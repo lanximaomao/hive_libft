@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:16:04 by linlinsun         #+#    #+#             */
-/*   Updated: 2022/11/14 13:38:37 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/14 21:44:28 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,16 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		check;
-	t_list	*m;
-	t_list	*n;
+	t_list	**new_lst;
+	t_list	*new_node;
 
-	m = ft_lstnew(f(lst));
-	n = ft_lstnew(f(lst));
-	check = -1;
-	if (lst && lst->next)
-		ft_lstmap(lst->next, f, del);
-	if (check < 0)
+	while (lst)
 	{
-		m = ft_lstnew(f(lst));
-		m->next = NULL;
-		check = 1;
+		new_node = ft_lstnew(f(lst->content));
+		if (!new_lst)
+			del(new_lst->content);
+		new_lst = ft_isadd_back(new_lst, new_node);
+		lst = lst->next;
 	}
-	else
-	{
-		n = ft_lstnew(f(lst));
-		n->next = m;
-	}
-	return (n);
+	return (new_lst);
 }
