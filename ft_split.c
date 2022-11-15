@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:12:40 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/14 12:59:00 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/15 13:35:53 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,21 @@ static size_t	ft_word_count(const char *s, char c)
 	size_t	i;
 	size_t	count;
 
-	count = 0;
 	i = 0;
-	while (s[i] != '\0')
+	count = 0;
+	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+		if (s[i] != c)
+		{
 			count++;
-		i++;
+			while (s[i] != c && s[i])
+			{
+				i++;
+			}
+		}
+		else
+			i++;
 	}
-	if (s[0] != c && s[0] != '\0')
-		count = count + 1;
 	return (count);
 }
 

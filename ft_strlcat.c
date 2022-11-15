@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 09:32:45 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 16:16:28 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/15 14:20:08 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = ft_strlen(dst);
 	j = 0;
 	k = i;
-	if (dstsize < i)
+	if (dstsize <= i)
 		return (ft_strlen((char *)(src)) + dstsize);
 	while (dstsize > i + 1 && src[j] != '\0')
 	{

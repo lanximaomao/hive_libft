@@ -6,7 +6,7 @@
 #    By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 15:48:08 by linlinsun         #+#    #+#              #
-#    Updated: 2022/11/14 21:20:48 by lsun             ###   ########.fr        #
+#    Updated: 2022/11/15 16:17:09 by lsun             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,9 @@ $(NAME):
 	cc $(CFLAGS) $(SRCS)
 	ar -rcs $(NAME) $(OBJS)
 
-bonus:
+bonus: $(BONUS_OBJS)
+
+$(BONUS_OBJS):
 	cc $(CFLAGS) $(BONUS_SRCS)
 	ar -rcs $(NAME) $(BONUS_OBJS)
 
