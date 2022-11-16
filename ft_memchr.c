@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: linlinsun <linlinsun@student.42.fr>        +#+  +:+       +#+        */
+/*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 14:30:46 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/11 12:29:00 by linlinsun        ###   ########.fr       */
+/*   Updated: 2022/11/16 17:49:17 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (&first[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
