@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:16:04 by linlinsun         #+#    #+#             */
-/*   Updated: 2022/11/14 22:23:23 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/16 13:17:59 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		new_lst = ft_lstnew(f(lst->content));
 		if (!new_lst)
-			return (0);
+			return (NULL);
 		lst = lst->next;
 	}
 	while (lst)

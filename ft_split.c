@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:12:40 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/15 13:35:53 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/16 13:18:43 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	str_arr = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (!str_arr)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (*s)
 	{

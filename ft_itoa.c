@@ -6,13 +6,13 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:58:47 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/10 16:07:40 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/16 13:11:10 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_digit_num(long int n)
+static int	ft_digit_num(int n)
 {
 	int	digit;
 
@@ -33,27 +33,25 @@ static int	ft_digit_num(long int n)
 char	*ft_itoa(int n)
 {
 	int			digit;
-	long int	ln;
 	char		*str;
 
-	ln = (long int)n;
-	digit = ft_digit_num(ln);
+	digit = ft_digit_num(n);
 	str = (char *)malloc(sizeof(char) * (digit + 1));
 	if (!str)
 		return (NULL);
 	str[digit] = '\0';
-	if (ln < 0)
+	if (n < 0)
 	{
 		str[0] = '-';
-		ln = ln * (-1);
+		n = n * (-1);
 	}
-	while (ln >= 10 && digit > 0)
+	while (n >= 10 && digit > 0)
 	{
 		str[digit - 1] = ln % 10 + 48;
-		ln = ln / 10;
+		n = n / 10;
 		digit--;
 	}
-	if (ln < 10)
-		str[digit - 1] = ln % 10 + 48;
+	if (n < 10)
+		str[digit - 1] = n % 10 + 48;
 	return (str);
 }

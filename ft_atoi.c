@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 09:37:32 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/14 20:14:00 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/16 13:09:28 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	result = 0;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
-	if (*str == 45)
+	if (*str == '-')
 		sign = -1;
-	if (*str == 43 || *str == 45)
+	if (*str == '-' || *str == '+')
 		str++;
-	while (*str >= 48 && *str <= 57)
+	while (*str >= '0' && *str <= '9')
 	{
 		result = result * 10 + (*str - '0');
 		if (result > 9223372036854775807)
