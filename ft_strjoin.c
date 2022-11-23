@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 13:57:40 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/04 14:21:07 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/23 13:37:14 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 			+ 1);
 	if (!joint_str)
 		return (NULL);
-	while (i < ft_strlen(s1) + ft_strlen(s2))
+	while (s1[i] != '\0')
 	{
-		if (i < ft_strlen(s1))
-			joint_str[i] = s1[i];
-		if (i >= ft_strlen(s1))
-			joint_str[i] = s2[j++];
+		joint_str[i] = s1[i];
 		i++;
 	}
+	j = 0;
+	while (s2[j] != '\0')
+		joint_str[i++] = s2[j++];
 	joint_str[i] = '\0';
 	return (joint_str);
 }

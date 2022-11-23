@@ -6,7 +6,7 @@
 /*   By: lsun <lsun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:00:15 by lsun              #+#    #+#             */
-/*   Updated: 2022/11/16 15:59:36 by lsun             ###   ########.fr       */
+/*   Updated: 2022/11/17 13:40:27 by lsun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count == 0 || size == 0)
 		return (ft_calloc(1, 1));
-	if (count * size / size != count || count * size / count != size)
+	if (count * size / size != count)
 		return (NULL);
 	start = (void *)malloc(size * count);
 	if (!start)

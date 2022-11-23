@@ -33,7 +33,7 @@ bonus: $(BONUS_OBJS)
 
 $(BONUS_OBJS):
 	cc $(CFLAGS) $(BONUS_SRCS)
-	ar -rcs $(NAME) $(BONUS_OBJS)
+	ar -rus $(NAME) $(BONUS_OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
