@@ -1,16 +1,13 @@
 # <center>Libft - 42 School project - Your very first own library</center>
 ## Description
 Write your own library: this project is about understanding the way how these basic functions work; implementing and learning to use them.
-<br>
-<br>
-## Language Used:
+<br><br>
+## Language used
 [![Language used](https://skills.thijs.gg/icons?i=c)](https://skills.thijs.gg)
-<br>
-<br>
-## Installation:
+<br><br>
+## Installation
 The library is written in C, so it needs the gcc compiler as well has the libraries <unist.d> and <stdlib.h> to compile
-<br>
-<br>
+<br><br>
 
 **1- To compile the library:**
 
@@ -28,7 +25,7 @@ The library is written in C, so it needs the gcc compiler as well has the librar
 
 ## Testing
 
-## **External testers:**
+*External testers:*
 
 + [War machine](https://github.com/0x050f/libft-war-machine)
 + [libftTester](https://github.com/Tripouille/libftTester)
