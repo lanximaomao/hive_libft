@@ -6,7 +6,7 @@ Write your own library: this project is about understanding the way how these ba
 [![Language used](https://skills.thijs.gg/icons?i=c)](https://skills.thijs.gg)
 <br><br>
 ## Installation
-The library is written in C, so it needs the gcc compiler as well has the libraries <unist.d> and <stdlib.h> to compile
+
 <br><br>
 
 **1- To compile the library:**
