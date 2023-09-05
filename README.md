@@ -1,6 +1,6 @@
 # <center>Libft - 42 School project - Your very first own library</center>
 ## Description
-Write your own library: this project is about understanding the way how these basic functions work; implementing and learning to use them.
+Write your own library: this project is about understanding the way how these basic functions work; implementing and learning to use them. Detailed project requirements can be found [here](Libft.pdf).
 <br><br>
 ## Language used
 [![Language used](https://skills.thijs.gg/icons?i=c)](https://skills.thijs.gg)
